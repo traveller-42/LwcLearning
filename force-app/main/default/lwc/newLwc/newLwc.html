@@ -1,0 +1,22 @@
+<template>
+    <div class="slds-m-around_large">
+        <h1>welcome to LWC</h1>
+       <lightning-input label="Type Here" required value={inputText} onchange={handleClick}>
+
+       </lightning-input>
+       <p>
+         {gretting}
+       </p>
+       <h1>{inputText}</h1>
+       <p>
+           <lightning-button label="Click Me" value="ClickMe" onclick={handleSubmit}></lightning-button>
+       </p>
+    </div>
+    <div class="slds-m-around_large">
+        <template for:each={result} for:item="contact">
+             <p key={contact.Id}>
+                 {contact.Id}
+             </p>   
+        </template>  
+    </div>
+</template>
